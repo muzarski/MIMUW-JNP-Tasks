@@ -20,7 +20,7 @@ od 1 do 999999999. Poszczególne elementy linii są oddzielone białymi znakami,
 których może być dowolnie wiele i które mogą też występować na początku lub na
 końcu linii. Przykładowy opis układu:
 
-AND 5 4 3 2 1
+AND 5 4 3 2 1  
 OR 1 2 3
 
 W trakcie czytania opisu układu program na bieżąco sprawdza, czy opis nie
@@ -29,14 +29,14 @@ jednego wyjścia (czy wyjścia bramek nie są ze sobą zwarte). Informacje
 o wykrytych błędach program wypisuje na standardowe wyjście błędów. Przykładowo
 dla opisu układu:
 
-NIE 2 1
-AND 2 4 6
+NIE 2 1  
+AND 2 4 6  
 OR  2 4 6
 
 program powinien wypisać (uwaga na spację po dwukropku i na zachowanie
 w komunikacie oryginalnej postaci błędnej linii):
 
-Error in line 1: NIE 2 1
+Error in line 1: NIE 2 1  
 Error in line 3: signal 2 is assigned to multiple outputs.
 
 Jeśli program wykrył co najmniej jeden błąd, to kończy działanie po przeczytaniu
@@ -48,7 +48,7 @@ pętli w zależnościach sygnałów). Jeśli wczytany opis nie reprezentuje ukł
 kombinacyjnego (jest to układ sekwencyjny), to program kończy działanie,
 wypisując komunikat na standardowe wyjście błędów. Przykładowo dla opisu układu:
 
-NAND 1 2 3
+NAND 1 2 3  
 NOT 2 1
 
 program powinien wypisać:
@@ -65,17 +65,17 @@ Każdy wiersz odpowiada jednej kombinacji sygnałów wejściowych. Te kombinacje
 rozważamy w takiej kolejności, że ich interpretacja jako liczb dwójkowych
 odpowiada kolejnym liczbom. Przykładowo dla opisu układu:
 
-AND 5 3 1
-XOR 7 5 9
+AND 5 3 1  
+XOR 7 5 9 
 
 program powinien wypisać:
 
-00000
-00011
-01000
-01011
-10000
-10011
-11110
+00000  
+00011  
+01000  
+01011  
+10000  
+10011  
+11110  
 11101
 
