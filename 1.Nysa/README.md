@@ -78,3 +78,4 @@ program powinien wypisać:
 10011
 11110
 11101
+
